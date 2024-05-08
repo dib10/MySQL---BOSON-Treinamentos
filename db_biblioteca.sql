@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 09/05/2024 às 01:30
+-- Tempo de geração: 09/05/2024 às 01:43
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.0.28
 
@@ -78,7 +78,10 @@ INSERT INTO `tbl_teste_incremento` (`Codigo`, `Nome`) VALUES
 (15, 'Ana'),
 (16, 'Maria'),
 (17, 'Julia'),
-(18, 'Joana');
+(18, 'Joana'),
+(90, 'Renata'),
+(91, 'Jorge'),
+(92, 'Fábio');
 
 --
 -- Índices para tabelas despejadas
@@ -128,7 +131,7 @@ ALTER TABLE `tbl_livro`
 -- AUTO_INCREMENT de tabela `tbl_teste_incremento`
 --
 ALTER TABLE `tbl_teste_incremento`
-  MODIFY `Codigo` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `Codigo` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
