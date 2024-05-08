@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 09/05/2024 às 00:58
+-- Tempo de geração: 09/05/2024 às 01:07
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.0.28
 
@@ -20,6 +20,29 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `db_biblioteca`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `tbl_autores`
+--
+
+CREATE TABLE `tbl_autores` (
+  `ID_Autor` smallint(6) NOT NULL,
+  `Nome_Autor` varchar(50) DEFAULT NULL,
+  `Sobrenome_Autor` varchar(60) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `tbl_editoras`
+--
+
+CREATE TABLE `tbl_editoras` (
+  `ID_Editora` smallint(6) NOT NULL,
+  `Nome_Editora` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -41,6 +64,18 @@ CREATE TABLE `tbl_livro` (
 --
 
 --
+-- Índices de tabela `tbl_autores`
+--
+ALTER TABLE `tbl_autores`
+  ADD PRIMARY KEY (`ID_Autor`);
+
+--
+-- Índices de tabela `tbl_editoras`
+--
+ALTER TABLE `tbl_editoras`
+  ADD PRIMARY KEY (`ID_Editora`);
+
+--
 -- Índices de tabela `tbl_livro`
 --
 ALTER TABLE `tbl_livro`
@@ -49,6 +84,12 @@ ALTER TABLE `tbl_livro`
 --
 -- AUTO_INCREMENT para tabelas despejadas
 --
+
+--
+-- AUTO_INCREMENT de tabela `tbl_editoras`
+--
+ALTER TABLE `tbl_editoras`
+  MODIFY `ID_Editora` smallint(6) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `tbl_livro`
