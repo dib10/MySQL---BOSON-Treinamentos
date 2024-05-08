@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 09/05/2024 às 01:07
+-- Tempo de geração: 09/05/2024 às 01:30
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.0.28
 
@@ -59,6 +59,27 @@ CREATE TABLE `tbl_livro` (
   `Preco_Livro` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `tbl_teste_incremento`
+--
+
+CREATE TABLE `tbl_teste_incremento` (
+  `Codigo` smallint(6) NOT NULL,
+  `Nome` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `tbl_teste_incremento`
+--
+
+INSERT INTO `tbl_teste_incremento` (`Codigo`, `Nome`) VALUES
+(15, 'Ana'),
+(16, 'Maria'),
+(17, 'Julia'),
+(18, 'Joana');
+
 --
 -- Índices para tabelas despejadas
 --
@@ -82,6 +103,12 @@ ALTER TABLE `tbl_livro`
   ADD PRIMARY KEY (`ID_Livro`);
 
 --
+-- Índices de tabela `tbl_teste_incremento`
+--
+ALTER TABLE `tbl_teste_incremento`
+  ADD PRIMARY KEY (`Codigo`);
+
+--
 -- AUTO_INCREMENT para tabelas despejadas
 --
 
@@ -96,6 +123,12 @@ ALTER TABLE `tbl_editoras`
 --
 ALTER TABLE `tbl_livro`
   MODIFY `ID_Livro` smallint(6) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `tbl_teste_incremento`
+--
+ALTER TABLE `tbl_teste_incremento`
+  MODIFY `Codigo` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
